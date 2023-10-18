@@ -1,0 +1,34 @@
+arr: = [30,20,100,40,10,50]
+
+//procedure for sorting
+PROCEDURE simple_sort(arr)
+VAR
+    arr: ARRAY_OF INTEGER[6];
+    i, j : INTEGER;
+    pos:=2;
+    elt:= 25;
+BEGIN
+    FOR i FROM 0 TO arr.length -1 DO    // for index from 0 to 90 do
+        IF (arr[i] > arr[i+1]) THEN     // if any array of integer is greater than the one in front then
+            swap(arr[i], arr[i+1])      // swap
+        END_IF
+    END_FOR                             // this will now be [10,20,30,40,50,100]
+END
+// procedure for insertion
+
+    FOR i FROM 0 TO arr.length -1 DO    // for index from 0 to 100  
+        Read(arr[i]);                   // read array of integer 
+    END_FOR
+
+        Write("give element to insert");
+        Read(elt);
+        Write("give the position to insert in array");
+        Read(pos)
+        j= arr.length+3                 // the j is now indicated as element 30
+        WHILE (j > = pos) DO            // greate a space between 30 and 70 
+            arr[j+1] = arr [j]          // here the pos will now be +1 which the j+1 is the new element(25)  // j now moves to the right and 25(elt) is being inserted at the pos
+                                        // the result will be [10,20,25,30,40,50,100]
+            ELSE
+                j: = j-1                // else j should remain the same
+        END_WHILE
+END
